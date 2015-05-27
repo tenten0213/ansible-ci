@@ -1,0 +1,12 @@
+---
+- name: install the latest version of Apache
+  sudo: yes
+  yum: name=httpd state=latest
+
+- name: install the latest version of Subversion
+  sudo: yes
+  yum: name=subversion state=latest
+
+- name: install the latest version of mod_dav_svn
+  sudo: yes
+  yum: name=mod_dav_svn state=latest

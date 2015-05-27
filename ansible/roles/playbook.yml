@@ -2,3 +2,4 @@
 - hosts: target
   roles:
     - jenkins
+    - subversion
