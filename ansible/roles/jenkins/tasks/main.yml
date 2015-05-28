@@ -2,6 +2,7 @@
 - name: download oracle jdk 1.8
   sudo: yes
   command: 'wget -q -O {{JAVA_DL_PATH}} --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" {{JAVA_DL_URL}} creates={{JAVA_DL_PATH}}'
+  poll: 10
 
 - name: install oracle jdk
   sudo: yes
@@ -15,6 +16,7 @@
   sudo: yes
   command: 'rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key'
   #rpm_key: state=present key=http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+  changed_when: False
 
 - name: ensure jenkins is at the latest version
   sudo: yes
