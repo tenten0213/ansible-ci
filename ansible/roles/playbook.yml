@@ -1,8 +1,9 @@
 ---
 - hosts: all
-- name: Creates Subversion directory
-  file: path=/var/svn state=directory
+  vars_files:
+    - ../vars/main.yml
+  name: Creates Subversion directory
   roles:
-    - { role: geerlingguy.svn }
-    - { role: geerlingguy.jenkins }
+    - { role: ansible-role-svn }
+    - { role: ansible-role-jenkins }
     - { role: distkloc.gitbucket }
