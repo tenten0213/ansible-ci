@@ -1,7 +1,8 @@
 # - src: geerlingguy.jenkins
 - src: https://github.com/tenten0213/ansible-role-jenkins
 
-- src: distkloc.gitbucket
+# - src: distkloc.gitbucket
+- src: https://github.com/tenten0213/ansible-role-gitbucket
 
 # - src: geerlingguy.svn
 - src: https://github.com/tenten0213/ansible-role-svn

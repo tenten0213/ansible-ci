@@ -2,8 +2,7 @@
 - hosts: all
   vars_files:
     - ../vars/main.yml
-  name: Creates Subversion directory
   roles:
+    - { role: ansible-role-gitbucket }
     - { role: ansible-role-svn }
     - { role: ansible-role-jenkins }
-    - { role: distkloc.gitbucket }
